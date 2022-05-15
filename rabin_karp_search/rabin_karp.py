@@ -43,10 +43,7 @@ def rabin_karp_alg(string, pattern, amount):
         hash_string -= hash_function(string[i:i+length_pattern])
         hash_string += hash_function(string[i+1:i+length_pattern+1])
 
-    if count == amount:
-        return True
-    else:
-        return False
+    return True if count == amount else False
 
 
 with open('data.txt', 'r') as f:
